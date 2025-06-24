@@ -5,30 +5,65 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Clase 7 - Ejercicios Java</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
 </head>
-<body class="min-h-screen bg-[#1b1525] text-[#f0e6ff]">
+<body class="min-h-screen bg-gradient-to-br from-[#1b1525] via-[#3b1d5f] to-[#7c3aed] text-[#f0e8ff] relative overflow-hidden">
 
-  <main class="max-w-3xl mx-auto px-6 py-12 text-center">
-    <h1 class="text-4xl font-extrabold mb-6 text-[#d2a8ff]">💻 Bienvenidos a la Clase 7</h1>
-    <p class="text-lg mb-10">Practicaremos <strong>estructuras condicionales</strong> y <strong>estructuras de repetición</strong> en Java, con ejercicios interactivos y progresivos.</p>
+  <!-- Fondo decorativo de puntos -->
+  <div class="absolute inset-0 bg-[radial-gradient(#ffffff1a_1px,transparent_1px)] bg-[length:40px_40px] opacity-10 pointer-events-none z-0"></div>
 
-    <div class="space-y-4 text-left">
-      <a href="if-else.html" class="block bg-[#b794f4] text-[#1b1525] font-bold text-lg py-3 px-6 rounded-xl shadow hover:bg-[#d2a8ff] transition">🧠 Condicionales: if / else</a>
+  <main class="relative z-10 max-w-3xl mx-auto px-6 py-16 text-center">
+    <h1 class="text-5xl font-extrabold mb-4 text-violet-400 tracking-tight">Bienvenidos a la Clase 7</h1>
+    <p class="text-xl text-violet-200 mb-12 max-w-xl mx-auto leading-relaxed">
+      Explora ejercicios progresivos para practicar <span class="font-semibold text-violet-300">condicionales</span> y <span class="font-semibold text-violet-300">estructuras de repetición</span> en Java.
+    </p>
 
-      <a href="operador-ternario.html" class="block bg-[#b794f4] text-[#1b1525] font-bold text-lg py-3 px-6 rounded-xl shadow hover:bg-[#d2a8ff] transition">⚖️ Operador ternario ? :</a>
+    <div class="grid sm:grid-cols-2 gap-6 text-left">
+      <a href="if-else.html" class="block bg-[#241933] border border-violet-500 hover:bg-violet-600 hover:border-violet-400 transition-all duration-300 ease-in-out shadow-lg rounded-xl p-5 transform hover:scale-[1.02]">
+        <h2 class="text-xl font-semibold text-violet-200 mb-1">Condicionales: if / else</h2>
+        <p class="text-sm text-violet-100">Evalúa condiciones simples y compuestas.</p>
+      </a>
 
-      <a href="switch.html" class="block bg-[#b794f4] text-[#1b1525] font-bold text-lg py-3 px-6 rounded-xl shadow hover:bg-[#d2a8ff] transition">🔀 Condicionales: switch</a>
+      <a href="operador-ternario.html" class="block bg-[#241933] border border-violet-500 hover:bg-violet-600 hover:border-violet-400 transition-all duration-300 ease-in-out shadow-lg rounded-xl p-5 transform hover:scale-[1.02]">
+        <h2 class="text-xl font-semibold text-violet-200 mb-1">Operador ternario</h2>
+        <p class="text-sm text-violet-100">Expresiones condicionales resumidas.</p>
+      </a>
 
-      <a href="switch-expresion.html" class="block bg-[#b794f4] text-[#1b1525] font-bold text-lg py-3 px-6 rounded-xl shadow hover:bg-[#d2a8ff] transition">🧩 Expresión switch (Java 14+)</a>
+      <a href="switch.html" class="block bg-[#241933] border border-violet-500 hover:bg-violet-600 hover:border-violet-400 transition-all duration-300 ease-in-out shadow-lg rounded-xl p-5 transform hover:scale-[1.02]">
+        <h2 class="text-xl font-semibold text-violet-200 mb-1">Condicionales: switch</h2>
+        <p class="text-sm text-violet-100">Alternativas múltiples según el valor.</p>
+      </a>
 
-      <a href="while.html" class="block bg-[#b794f4] text-[#1b1525] font-bold text-lg py-3 px-6 rounded-xl shadow hover:bg-[#d2a8ff] transition">🔁 Ciclo while</a>
+      <a href="switch-expresion.html" class="block bg-[#241933] border border-violet-500 hover:bg-violet-600 hover:border-violet-400 transition-all duration-300 ease-in-out shadow-lg rounded-xl p-5 transform hover:scale-[1.02]">
+        <h2 class="text-xl font-semibold text-violet-200 mb-1">Expresión switch (Java 14+)</h2>
+        <p class="text-sm text-violet-100">Una forma moderna de estructurar decisiones.</p>
+      </a>
 
-      <a href="do-while.html" class="block bg-[#b794f4] text-[#1b1525] font-bold text-lg py-3 px-6 rounded-xl shadow hover:bg-[#d2a8ff] transition">🔄 Ciclo do-while</a>
+      <a href="while.html" class="block bg-[#241933] border border-violet-500 hover:bg-violet-600 hover:border-violet-400 transition-all duration-300 ease-in-out shadow-lg rounded-xl p-5 transform hover:scale-[1.02]">
+        <h2 class="text-xl font-semibold text-violet-200 mb-1">Ciclo while</h2>
+        <p class="text-sm text-violet-100">Iteración basada en condición previa.</p>
+      </a>
 
-      <a href="for.html" class="block bg-[#b794f4] text-[#1b1525] font-bold text-lg py-3 px-6 rounded-xl shadow hover:bg-[#d2a8ff] transition">📈 Ciclo for</a>
+      <a href="do-while.html" class="block bg-[#241933] border border-violet-500 hover:bg-violet-600 hover:border-violet-400 transition-all duration-300 ease-in-out shadow-lg rounded-xl p-5 transform hover:scale-[1.02]">
+        <h2 class="text-xl font-semibold text-violet-200 mb-1">Ciclo do-while</h2>
+        <p class="text-sm text-violet-100">Asegura al menos una ejecución.</p>
+      </a>
 
-      <a href="break-continue.html" class="block bg-[#b794f4] text-[#1b1525] font-bold text-lg py-3 px-6 rounded-xl shadow hover:bg-[#d2a8ff] transition">⛔ break y continue</a>
+      <a href="for.html" class="block bg-[#241933] border border-violet-500 hover:bg-violet-600 hover:border-violet-400 transition-all duration-300 ease-in-out shadow-lg rounded-xl p-5 transform hover:scale-[1.02]">
+        <h2 class="text-xl font-semibold text-violet-200 mb-1">Ciclo for</h2>
+        <p class="text-sm text-violet-100">Ideal para ciclos con contador definido.</p>
+      </a>
+
+      <a href="break-continue.html" class="block bg-[#241933] border border-violet-500 hover:bg-violet-600 hover:border-violet-400 transition-all duration-300 ease-in-out shadow-lg rounded-xl p-5 transform hover:scale-[1.02]">
+        <h2 class="text-xl font-semibold text-violet-200 mb-1">Break y Continue</h2>
+        <p class="text-sm text-violet-100">Control de flujo dentro de bucles.</p>
+      </a>
     </div>
   </main>
+
 </body>
 </html>
