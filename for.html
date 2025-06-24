@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ciclo For - Java</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#1b1525] text-[#f0e6ff]">
+
+  <main class="max-w-4xl mx-auto px-6 py-12">
+    <h1 class="text-4xl font-bold text-center mb-10 text-[#d2a8ff]">🔄 Ejercicios Progresivos: Ciclo <code>for</code> (Java)</h1>
+
+    <section class="mb-12">
+      <p class="text-lg text-[#e0d6fa] mb-4">
+        El ciclo <code>for</code> se utiliza para repetir una acción un número conocido de veces, facilitando la iteración controlada.
+      </p>
+      <ul class="list-disc ml-5 space-y-1 text-[#d0c4ec]">
+        <li>✅ Úsalo cuando sepas cuántas veces se debe repetir un proceso.</li>
+        <li>🚫 Evítalo si la cantidad de iteraciones depende de condiciones no conocidas antes de iniciar (usa <code>while</code> o <code>do-while</code>).</li>
+      </ul>
+    </section>
+
+    <section id="ejercicios" class="space-y-12"></section>
+
+    <a href="index.html" class="block text-center mt-12 text-[#b794f4] underline hover:text-[#d2a8ff]">← Volver a la página principal</a>
+  </main>
+
+  <style>
+    .btn {
+      width: 100%;
+      background-color: #b794f4;
+      color: #1b1525;
+      font-weight: 500;
+      padding: 0.75rem;
+      border-radius: 0.75rem;
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #d2a8ff;
+    }
+  </style>
+
+  <script>
+    const ejercicios = [
+      {
+        pregunta: "¿Cuántas veces se ejecuta este ciclo?",
+        codigo: `for(int i = 0; i < 5; i++) {
+  System.out.println("Hola");
+}`,
+        opciones: ["4 veces", "5 veces", "6 veces"],
+        correcta: 1
+      },
+      {
+        pregunta: "¿Qué imprime este ciclo?",
+        codigo: `for(int i = 2; i <= 6; i += 2) {
+  System.out.print(i + " ");
+}`,
+        opciones: ["2 3 4 5 6", "2 4 6", "2 4 6 8"],
+        correcta: 1
+      },
+      {
+        pregunta: "¿Cuál es el valor final de 'suma' después de ejecutar el ciclo?",
+        codigo: `int suma = 0;
+for(int i = 1; i <= 4; i++) {
+  suma += i;
+}
+System.out.println(suma);`,
+        opciones: ["10", "15", "20"],
+        correcta: 0
+      },
+      {
+        pregunta: "¿Qué hace este ciclo?",
+        codigo: `for(int i = 5; i > 0; i--) {
+  System.out.print(i + " ");
+}`,
+        opciones: [
+          "Imprime: 1 2 3 4 5",
+          "Imprime: 5 4 3 2 1",
+          "No imprime nada"
+        ],
+        correcta: 1
+      },
+      {
+        pregunta: "¿Cuándo se recomienda usar un ciclo for en lugar de while?",
+        codigo: `// No hay código para esta pregunta`,
+        opciones: [
+          "Cuando el número de iteraciones es desconocido",
+          "Cuando el número de iteraciones es fijo o conocido",
+          "Cuando necesito que se ejecute al menos una vez"
+        ],
+        correcta: 1
+      },
+      {
+        pregunta: "¿Qué pasa con este ciclo?",
+        codigo: `for(int i = 0; i < 3; i++) {
+  if(i == 1) break;
+  System.out.print(i + " ");
+}`,
+        opciones: [
+          "Imprime: 0 1 2",
+          "Imprime: 0",
+          "No imprime nada"
+        ],
+        correcta: 1
+      },
+      {
+        pregunta: "¿Cuál es la salida de este código?",
+        codigo: `for(int i = 0; i < 4; i++) {
+  if(i % 2 == 0) continue;
+  System.out.print(i + " ");
+}`,
+        opciones: [
+          "0 1 2 3",
+          "1 3",
+          "2 4"
+        ],
+        correcta: 1
+      },
+      {
+        pregunta: "¿Qué imprime este ciclo for anidado?",
+        codigo: `for(int i = 1; i <= 2; i++) {
+  for(int j = 1; j <= 3; j++) {
+    System.out.print(i * j + " ");
+  }
+  System.out.println();
+}`,
+        opciones: [
+          "1 2 3 \n1 2 3",
+          "1 2 3 \n2 4 6",
+          "1 3 5 \n2 4 6"
+        ],
+        correcta: 1
+      },
+      {
+        pregunta: "¿Cuál es el problema con este ciclo?",
+        codigo: `for(int i = 0; i < 5; i--) {
+  System.out.println(i);
+}`,
+        opciones: [
+          "Se ejecuta infinitamente porque i nunca aumenta",
+          "Se ejecuta 5 veces normalmente",
+          "No compila"
+        ],
+        correcta: 0
+      },
+      {
+        pregunta: "¿Cuál es el equivalente con while del siguiente ciclo for?",
+        codigo: `for(int i = 0; i < 3; i++) {
+  System.out.println("Iteración " + i);
+}`,
+        opciones: [
+          `int i = 0;
+while(i < 3) {
+  System.out.println("Iteración " + i);
+  i++;
+}`,
+          `int i = 1;
+while(i <= 3) {
+  System.out.println("Iteración " + i);
+  i++;
+}`,
+          `int i = 0;
+System.out.println("Iteración " + i);
+while(i < 2) {
+  System.out.println("Iteración " + (i + 1));
+  i++;
+}`
+        ],
+        correcta: 0
+      }
+    ];
+
+    const contenedor = document.getElementById("ejercicios");
+
+    ejercicios.forEach((e, i) => {
+      const section = document.createElement("section");
+      section.className = "bg-[#2d223f] rounded-xl p-6 shadow";
+      section.innerHTML = `
+        <h2 class="text-2xl font-semibold mb-2 text-[#b794f4]">Ejercicio ${i + 1}</h2>
+        <p class="mb-2">${e.pregunta}</p>
+        <pre class="bg-[#1b1525] p-4 rounded mb-4 text-sm overflow-x-auto"><code>${e.codigo}</code></pre>
+        <div class="space-y-2">
+          ${e.opciones.map((op, j) => `<button class="btn" onclick="verificar(${i}, ${j})">${j + 1}. ${op}</button>`).join("")}
+        </div>
+        <p id="feedback${i}" class="mt-4 text-lg font-semibold"></p>
+      `;
+      contenedor.appendChild(section);
+    });
+
+    function verificar(indice, respuesta) {
+      const correcto = ejercicios[indice].correcta;
+      const feedback = document.getElementById("feedback" + indice);
+      if (respuesta === correcto) {
+        feedback.textContent = "✅ ¡Correcto!";
+        feedback.className = "text-green-300 mt-4";
+      } else {
+        feedback.textContent = "❌ Incorrecto. Intenta de nuevo.";
+        feedback.className = "text-red-300 mt-4";
+      }
+    }
+  </script>
+</body>
+</html>

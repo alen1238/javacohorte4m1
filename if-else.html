@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicios if - else en Java</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#1b1525] text-[#f0e6ff]">
+
+  <main class="max-w-4xl mx-auto px-6 py-12">
+    <h1 class="text-4xl font-bold text-center mb-10 text-[#d2a8ff]">🧪 Ejercicios Progresivos: if - else (Java)</h1>
+
+    <section id="ejercicios" class="space-y-12"></section>
+
+    <a href="index.html" class="block text-center mt-12 text-[#b794f4] underline hover:text-[#d2a8ff]">← Volver a la página principal</a>
+  </main>
+
+  <style>
+    .btn {
+      width: 100%;
+      background-color: #b794f4;
+      color: #1b1525;
+      font-weight: 500;
+      padding: 0.75rem;
+      border-radius: 0.75rem;
+      transition: background-color 0.3s ease;
+    }
+    .btn:hover {
+      background-color: #d2a8ff;
+    }
+  </style>
+
+  <script>
+    const ejercicios = [
+      {
+        pregunta: "¿Qué imprime este código si `int edad = 20;`?",
+        codigo: `int edad = 20;
+if (edad >= 18) {
+    System.out.println("Adulto");
+} else {
+    System.out.println("Menor de edad");
+}`,
+        opciones: ["Menor de edad", "Adulto", "Nada"],
+        correcta: 1
+      },
+      {
+        pregunta: "¿Qué ocurre si `int x = 5;`?",
+        codigo: `int x = 5;
+if (x < 10) {
+    System.out.println("Menor que 10");
+}`,
+        opciones: ["Se imprime 'Menor que 10'", "Se imprime '10'", "No se imprime nada"],
+        correcta: 0
+      },
+      {
+        pregunta: "¿Qué salida da este código si `boolean llueve = true;`?",
+        codigo: `boolean llueve = true;
+if (llueve) {
+    System.out.println("Lleva paraguas");
+} else {
+    System.out.println("Disfruta el sol");
+}`,
+        opciones: ["Lleva paraguas", "Disfruta el sol", "true"],
+        correcta: 0
+      },
+      {
+        pregunta: "¿Qué se imprime si `int nota = 4;`?",
+        codigo: `int nota = 4;
+if (nota >= 5) {
+    System.out.println("Aprobado");
+} else {
+    System.out.println("Reprobado");
+}`,
+        opciones: ["Aprobado", "Reprobado", "Error de compilación"],
+        correcta: 1
+      },
+      {
+        pregunta: "¿Qué pasa si `int temp = 30;`?",
+        codigo: `int temp = 30;
+if (temp > 35) {
+    System.out.println("Calor extremo");
+} else {
+    System.out.println("Temperatura moderada");
+}`,
+        opciones: ["Calor extremo", "Temperatura moderada", "Nada"],
+        correcta: 1
+      },
+      {
+        pregunta: "¿Cuál es la salida si `int num = -3;`?",
+        codigo: `int num = -3;
+if (num >= 0) {
+    System.out.println("Positivo");
+} else {
+    System.out.println("Negativo");
+}`,
+        opciones: ["Positivo", "Negativo", "0"],
+        correcta: 1
+      },
+      {
+        pregunta: "¿Qué imprime si `int edad = 15;`?",
+        codigo: `int edad = 15;
+if (edad >= 18) {
+    System.out.println("Puedes votar");
+} else {
+    System.out.println("No puedes votar");
+}`,
+        opciones: ["Puedes votar", "No puedes votar", "Edad no válida"],
+        correcta: 1
+      },
+      {
+        pregunta: "¿Qué muestra si `int n = 0;`?",
+        codigo: `int n = 0;
+if (n > 0) {
+    System.out.println("Positivo");
+} else if (n < 0) {
+    System.out.println("Negativo");
+} else {
+    System.out.println("Cero");
+}`,
+        opciones: ["Positivo", "Negativo", "Cero"],
+        correcta: 2
+      },
+      {
+        pregunta: "¿Qué sucede si `int a = 5, b = 10;`?",
+        codigo: `int a = 5, b = 10;
+if (a > b) {
+    System.out.println("a es mayor");
+} else {
+    System.out.println("b es mayor");
+}`,
+        opciones: ["a es mayor", "b es mayor", "a = b"],
+        correcta: 1
+      },
+      {
+        pregunta: "¿Qué salida genera si `int horas = 8;`?",
+        codigo: `int horas = 8;
+if (horas >= 6 && horas <= 8) {
+    System.out.println("Buen descanso");
+} else {
+    System.out.println("Revisa tu rutina");
+}`,
+        opciones: ["Buen descanso", "Revisa tu rutina", "Nada"],
+        correcta: 0
+      }
+    ];
+
+    const contenedor = document.getElementById("ejercicios");
+
+    ejercicios.forEach((e, i) => {
+      const section = document.createElement("section");
+      section.className = "bg-[#2d223f] rounded-xl p-6 shadow";
+      section.innerHTML = `
+        <h2 class="text-2xl font-semibold mb-2 text-[#b794f4]">Ejercicio ${i + 1}</h2>
+        <p class="mb-2">${e.pregunta}</p>
+        <pre class="bg-[#1b1525] p-4 rounded mb-4 text-sm overflow-x-auto"><code>${e.codigo}</code></pre>
+        <div class="space-y-2">
+          ${e.opciones.map((op, j) => `<button class="btn" onclick="verificar(${i}, ${j})">${j + 1}. ${op}</button>`).join("")}
+        </div>
+        <p id="feedback${i}" class="mt-4 text-lg font-semibold"></p>
+      `;
+      contenedor.appendChild(section);
+    });
+
+    function verificar(indice, respuesta) {
+      const correcto = ejercicios[indice].correcta;
+      const feedback = document.getElementById("feedback" + indice);
+      if (respuesta === correcto) {
+        feedback.textContent = "✅ ¡Correcto!";
+        feedback.className = "text-green-300 mt-4";
+      } else {
+        feedback.textContent = "❌ Incorrecto. Intenta de nuevo.";
+        feedback.className = "text-red-300 mt-4";
+      }
+    }
+  </script>
+</body>
+</html>
