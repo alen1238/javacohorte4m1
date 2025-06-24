@@ -9,6 +9,18 @@
     html {
       font-family: 'Inter', sans-serif;
     }
+
+    /* Scroll personalizado en navegadores modernos */
+    .scroll-x::-webkit-scrollbar {
+      height: 8px;
+    }
+    .scroll-x::-webkit-scrollbar-thumb {
+      background: #7c3aed;
+      border-radius: 4px;
+    }
+    .scroll-x::-webkit-scrollbar-track {
+      background: transparent;
+    }
   </style>
 </head>
 <body class="min-h-screen bg-gradient-to-br from-[#1b1525] via-[#3b1d5f] to-[#7c3aed] text-[#f0e8ff] relative overflow-hidden">
@@ -16,54 +28,54 @@
   <!-- Fondo decorativo de puntos -->
   <div class="absolute inset-0 bg-[radial-gradient(#ffffff1a_1px,transparent_1px)] bg-[length:40px_40px] opacity-10 pointer-events-none z-0"></div>
 
-  <main class="relative z-10 max-w-3xl mx-auto px-6 py-16 text-center">
-    <h1 class="text-5xl font-extrabold mb-4 text-violet-400 tracking-tight">Bienvenidos a la Clase 7</h1>
+  <main class="relative z-10 max-w-6xl mx-auto px-6 py-16 text-center">
+    <h1 class="text-5xl font-extrabold mb-4 text-violet-400">Bienvenidos a la Clase 7</h1>
     <p class="text-xl text-violet-200 mb-12 max-w-xl mx-auto leading-relaxed">
       Tu entrenamiento Java comienza ahora
     </p>
 
-    <div class="grid sm:grid-cols-2 gap-6 text-left">
-      <a href="if-else.html" class="block bg-[#241933] border border-violet-500 hover:bg-violet-600 hover:border-violet-400 transition-all duration-300 ease-in-out shadow-lg rounded-xl p-5 transform hover:scale-[1.02]">
-        <h2 class="text-xl font-semibold text-violet-200 mb-1">Condicionales: if / else</h2>
+    <!-- Scroll horizontal de tarjetas -->
+    <div class="flex gap-6 overflow-x-auto scroll-x pb-4 px-1 snap-x snap-mandatory">
+      <a href="if-else.html" class="min-w-[260px] snap-start bg-[#241933] border border-violet-500 hover:bg-violet-600 hover:border-violet-400 transition-all shadow-lg rounded-xl p-6 flex-shrink-0">
+        <h2 class="text-lg font-semibold text-violet-200 mb-1">Condicionales: if / else</h2>
         <p class="text-sm text-violet-100">Evalúa condiciones simples y compuestas.</p>
       </a>
 
-      <a href="operador-ternario.html" class="block bg-[#241933] border border-violet-500 hover:bg-violet-600 hover:border-violet-400 transition-all duration-300 ease-in-out shadow-lg rounded-xl p-5 transform hover:scale-[1.02]">
-        <h2 class="text-xl font-semibold text-violet-200 mb-1">Operador ternario</h2>
+      <a href="operador-ternario.html" class="min-w-[260px] snap-start bg-[#241933] border border-violet-500 hover:bg-violet-600 hover:border-violet-400 transition-all shadow-lg rounded-xl p-6 flex-shrink-0">
+        <h2 class="text-lg font-semibold text-violet-200 mb-1">Operador ternario</h2>
         <p class="text-sm text-violet-100">Expresiones condicionales resumidas.</p>
       </a>
 
-      <a href="switch.html" class="block bg-[#241933] border border-violet-500 hover:bg-violet-600 hover:border-violet-400 transition-all duration-300 ease-in-out shadow-lg rounded-xl p-5 transform hover:scale-[1.02]">
-        <h2 class="text-xl font-semibold text-violet-200 mb-1">Condicionales: switch</h2>
+      <a href="switch.html" class="min-w-[260px] snap-start bg-[#241933] border border-violet-500 hover:bg-violet-600 hover:border-violet-400 transition-all shadow-lg rounded-xl p-6 flex-shrink-0">
+        <h2 class="text-lg font-semibold text-violet-200 mb-1">Condicionales: switch</h2>
         <p class="text-sm text-violet-100">Alternativas múltiples según el valor.</p>
       </a>
 
-      <a href="switch-expresion.html" class="block bg-[#241933] border border-violet-500 hover:bg-violet-600 hover:border-violet-400 transition-all duration-300 ease-in-out shadow-lg rounded-xl p-5 transform hover:scale-[1.02]">
-        <h2 class="text-xl font-semibold text-violet-200 mb-1">Expresión switch (Java 14+)</h2>
-        <p class="text-sm text-violet-100">Una forma moderna de estructurar decisiones.</p>
+      <a href="switch-expresion.html" class="min-w-[260px] snap-start bg-[#241933] border border-violet-500 hover:bg-violet-600 hover:border-violet-400 transition-all shadow-lg rounded-xl p-6 flex-shrink-0">
+        <h2 class="text-lg font-semibold text-violet-200 mb-1">Expresión switch (Java 14+)</h2>
+        <p class="text-sm text-violet-100">Estructura moderna de decisiones.</p>
       </a>
 
-      <a href="while.html" class="block bg-[#241933] border border-violet-500 hover:bg-violet-600 hover:border-violet-400 transition-all duration-300 ease-in-out shadow-lg rounded-xl p-5 transform hover:scale-[1.02]">
-        <h2 class="text-xl font-semibold text-violet-200 mb-1">Ciclo while</h2>
-        <p class="text-sm text-violet-100">Iteración basada en condición previa.</p>
+      <a href="while.html" class="min-w-[260px] snap-start bg-[#241933] border border-violet-500 hover:bg-violet-600 hover:border-violet-400 transition-all shadow-lg rounded-xl p-6 flex-shrink-0">
+        <h2 class="text-lg font-semibold text-violet-200 mb-1">Ciclo while</h2>
+        <p class="text-sm text-violet-100">Repite mientras se cumpla una condición.</p>
       </a>
 
-      <a href="do-while.html" class="block bg-[#241933] border border-violet-500 hover:bg-violet-600 hover:border-violet-400 transition-all duration-300 ease-in-out shadow-lg rounded-xl p-5 transform hover:scale-[1.02]">
-        <h2 class="text-xl font-semibold text-violet-200 mb-1">Ciclo do-while</h2>
-        <p class="text-sm text-violet-100">Asegura al menos una ejecución.</p>
+      <a href="do-while.html" class="min-w-[260px] snap-start bg-[#241933] border border-violet-500 hover:bg-violet-600 hover:border-violet-400 transition-all shadow-lg rounded-xl p-6 flex-shrink-0">
+        <h2 class="text-lg font-semibold text-violet-200 mb-1">Ciclo do-while</h2>
+        <p class="text-sm text-violet-100">Ejecuta al menos una vez.</p>
       </a>
 
-      <a href="for.html" class="block bg-[#241933] border border-violet-500 hover:bg-violet-600 hover:border-violet-400 transition-all duration-300 ease-in-out shadow-lg rounded-xl p-5 transform hover:scale-[1.02]">
-        <h2 class="text-xl font-semibold text-violet-200 mb-1">Ciclo for</h2>
-        <p class="text-sm text-violet-100">Ideal para ciclos con contador definido.</p>
+      <a href="for.html" class="min-w-[260px] snap-start bg-[#241933] border border-violet-500 hover:bg-violet-600 hover:border-violet-400 transition-all shadow-lg rounded-xl p-6 flex-shrink-0">
+        <h2 class="text-lg font-semibold text-violet-200 mb-1">Ciclo for</h2>
+        <p class="text-sm text-violet-100">Perfecto para iteraciones contadas.</p>
       </a>
 
-      <a href="break-continue.html" class="block bg-[#241933] border border-violet-500 hover:bg-violet-600 hover:border-violet-400 transition-all duration-300 ease-in-out shadow-lg rounded-xl p-5 transform hover:scale-[1.02]">
-        <h2 class="text-xl font-semibold text-violet-200 mb-1">Break y Continue</h2>
-        <p class="text-sm text-violet-100">Control de flujo dentro de bucles.</p>
+      <a href="break-continue.html" class="min-w-[260px] snap-start bg-[#241933] border border-violet-500 hover:bg-violet-600 hover:border-violet-400 transition-all shadow-lg rounded-xl p-6 flex-shrink-0">
+        <h2 class="text-lg font-semibold text-violet-200 mb-1">Break y continue</h2>
+        <p class="text-sm text-violet-100">Controla el flujo en los ciclos.</p>
       </a>
     </div>
   </main>
-
 </body>
 </html>
